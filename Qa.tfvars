@@ -1,22 +1,22 @@
-resource_group_name = "rg001"
+resource_group_name = "qarg001"
 location = "east us"
 
 #storage_account
-storage_account_name = "storageacc001"
+storage_account_name = "qastorageacc001"
 
 account_tier = "Standard"
  
 account_replication_type = "LRS"
 
-vnet_name = "vnet001"
+vnet_name = "qavnet001"
 
 address_space = ["10.0.0.0/16"]
 
-subnet_name = "subnet001"
+subnet_name = "qasubnet001"
 
 address_prefixes = ["10.0.2.0/24"]
 
-nic_name = "nic001"
+nic_name = "qanic001"
 
 
 ip_config_name = "internal"
@@ -25,14 +25,14 @@ ip_config_name = "internal"
 
 private_ip_address_allocation = "Dynamic"
 
-vm_name = "vname001"
+vm_name = "qavname001"
 
 vm_size = "Standard_F2"
 
 
-admin_username = "Vamshi"
+admin_username = "Vamshiqa"
 
-admin_password = "Vamshi@6678"
+admin_password = "Vamshiqa@6678"
 
 os_disk_caching = "ReadWrite"
 
