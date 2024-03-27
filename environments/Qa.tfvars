@@ -36,7 +36,7 @@ admin_password = "Vamshiqa@6678"
 
 os_disk_caching = "ReadWrite"
 
-os_disk_storage_account_type = "Standars_LRS"
+os_disk_storage_account_type = "Standard_LRS"
 
 source_img_ref_publisher = "MicrosoftWindowsServer"
 
