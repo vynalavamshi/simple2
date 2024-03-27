@@ -12,7 +12,7 @@ resource "azurerm_storage_account" "storageaccountname" {
   location                 = var.location
   account_tier             = var.account_tier
   account_replication_type = var.account_replication_type
-
+  depends_on               = [var.resource_group_name]
 }
 
 resource "azurerm_virtual_network" "vnet" {
@@ -20,6 +20,7 @@ resource "azurerm_virtual_network" "vnet" {
   address_space       = var.address_space
   location            = var.location
   resource_group_name = var.resource_group_name
+  depends_on          = [var.resource_group_name, var.var.vnet_name]
 }
 
 resource "azurerm_subnet" "subnet" {
@@ -27,12 +28,14 @@ resource "azurerm_subnet" "subnet" {
   resource_group_name  = var.resource_group_name
   virtual_network_name = var.vnet_name
   address_prefixes     = var.address_prefixes
+  depends_on           = [var.resource_group_name]
 }
 
 resource "azurerm_network_interface" "nic" {
   name                = var.nic_name
   location            = var.location
   resource_group_name = var.resource_group_name
+  depends_on          = [var.resource_group_name]
 
   ip_configuration {
     name                          = var.ip_config_name
@@ -48,6 +51,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   size                = var.vm_size
   admin_username      = var.admin_username
   admin_password      = var.admin_password
+  depends_on          = [var.resource_group_name]
   network_interface_ids = [
     azurerm_network_interface.nic.id,
   ]

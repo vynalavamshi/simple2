@@ -18,7 +18,6 @@ address_prefixes = ["10.0.2.0/24"]
 
 nic_name = "preprodnic001"
 
-
 ip_config_name = "internal"
 
 # subnet_id 
@@ -29,7 +28,6 @@ vm_name = "preprodvname001"
 
 vm_size = "Standard_F2"
 
-
 admin_username = "Vamshipreprod"
 
 admin_password = "Vamshipreprod@6678"
@@ -39,7 +37,6 @@ os_disk_caching = "ReadWrite"
 os_disk_storage_account_type = "Standard_LRS"
 
 source_img_ref_publisher = "MicrosoftWindowsServer"
-
 
 source_img_ref_offer = "WindowsServer"
 
